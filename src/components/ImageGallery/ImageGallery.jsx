@@ -47,7 +47,7 @@ class ImageGallery extends Component {
             />
           ))}
         </ImageGalleryList>
-        {images.length > 11 && <LoadMore onClick={onLoadMore} />}
+        {images.length > 11 && <LoadMore onClick={onLoadMore} isLoading={isLoading}/>}
         {showModal && (
           <Modal onClose={this.toggleModal}>
             <img src={modalImages} alt={tags} />
