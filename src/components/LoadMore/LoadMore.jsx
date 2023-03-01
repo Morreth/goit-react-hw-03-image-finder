@@ -11,6 +11,7 @@ const LoadMore = ({ onClick, isLoading }) => {
 
 LoadMore.propTypes = {
   onClick: PropTypes.func,
+  isLoading: propTypes.bool,
 };
 
 export default LoadMore;
