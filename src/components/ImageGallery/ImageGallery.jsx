@@ -29,7 +29,7 @@ class ImageGallery extends Component {
   };
 
   render() {
-    const { images, onLoadMore } = this.props;
+    const { images, onLoadMore, imagesLoading } = this.props;
     const { isLoading, modalImages, tags, showModal } = this.state;
 
     return (
@@ -47,7 +47,7 @@ class ImageGallery extends Component {
             />
           ))}
         </ImageGalleryList>
-        {images.length > 11 && <LoadMore onClick={onLoadMore} isLoading={isLoading}/>}
+        {images.length > 11 && <LoadMore onClick={onLoadMore} isLoading={isLoading || imagesLoading}/>}
         {showModal && (
           <Modal onClose={this.toggleModal}>
             <img src={modalImages} alt={tags} />

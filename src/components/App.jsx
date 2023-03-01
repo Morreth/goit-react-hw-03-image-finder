@@ -84,7 +84,7 @@ class App extends Component {
           {isLoading && <Loader />}
           {error && <p>{error}</p>}
           {images.length !== 0 && (
-            <ImageGallery images={images} onLoadMore={this.loadMore} />
+            <ImageGallery images={images} onLoadMore={this.loadMore} imagesLoading={isLoading} />
           )}
           <ToastContainer autoClose={3000} />
         </MainApp>
